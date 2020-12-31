@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+body {
+  font-size: 13px;
+  background-color: hsl(210, 46%, 95%);
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5fr;
+  row-gap: 5px;
+  justify-items: center;
+}
+.wrapper .card {
+  max-width: 550px;
+  background-color: bisque;
+}
+/* MEDIA QUERIES */
+@media (min-width: 1024px) {
+  .wrapper .card {
+    max-width: 700px;
+    background-color: green;
+  }
+}
