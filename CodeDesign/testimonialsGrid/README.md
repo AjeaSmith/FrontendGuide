@@ -1,6 +1,6 @@
 # Read Me Template
 
-![Project Image](/images/testimonialGridpng.png)
+![Project Image](https://ibb.co/xqt5NqL)
 
 > Testimonial Grid Image.
 
