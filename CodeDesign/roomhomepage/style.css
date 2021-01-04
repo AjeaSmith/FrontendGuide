@@ -16,9 +16,8 @@ body {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "section1" "section2" "section3" "section4" "section5";
-  -ms-grid-rows: auto 28% auto 19% auto;
-      grid-template-rows: auto 28% auto 19% auto;
-  row-gap: 10px;
+  -ms-grid-rows: auto 32% auto 27% auto;
+      grid-template-rows: auto 32% auto 27% auto;
 }
 
 .wrapper .section1 {
@@ -28,8 +27,12 @@ body {
   position: relative;
 }
 
-.wrapper .section1 img {
+.wrapper .section1 .mobile_img {
   width: 100%;
+}
+
+.wrapper .section1 .desktop_img {
+  display: none;
 }
 
 .wrapper .section1 nav {
@@ -105,7 +108,7 @@ body {
 }
 
 .wrapper .section2 .section2_content {
-  padding: 0 3rem;
+  padding: 0 2rem;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,7 +131,7 @@ body {
   line-height: 1.8;
   color: #a1a1a1;
   margin-top: 1.3em;
-  margin-bottom: 5em;
+  margin-bottom: 3em;
 }
 
 .wrapper .section2 .section2_content span.shop_now {
@@ -173,13 +176,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 2.5em;
+  padding: 0 2em;
 }
 
 .wrapper .section4 .section4_content h2 {
   text-transform: uppercase;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5em;
 }
 
 .wrapper .section4 .section4_content p {
@@ -196,4 +200,47 @@ body {
 
 .wrapper .section5 img {
   width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .wrapper {
+    -ms-grid-rows: auto 17% auto 17% auto;
+        grid-template-rows: auto 17% auto 17% auto;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .wrapper {
+    -ms-grid-rows: auto 17% auto 17% auto;
+        grid-template-rows: auto 17% auto 17% auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+        grid-template-areas: "section1 section1 section2" "section3 section4 section5";
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+  }
+  .wrapper .section1 .mobile_img {
+    display: none;
+  }
+  .wrapper .section1 .desktop_img {
+    display: block;
+    width: 100%;
+  }
+  .wrapper .section1 .slider_buttons {
+    bottom: 0px;
+    right: -157px;
+  }
+  .wrapper .section3 {
+    width: 395px;
+    background-image: url(./images/image-about-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .wrapper .section3 #about_img {
+    display: none;
+  }
 }
