@@ -17,15 +17,34 @@ body {
     "section3"
     "section4"
     "section5";
-  grid-template-rows: auto 32% auto 27% auto;
+  grid-template-rows: 32% 32% auto 27% auto;
+  row-gap: 25px;
   .section1 {
     grid-area: section1;
     position: relative;
-    .mobile_img {
-      width: 100%;
-    }
-    .desktop_img {
-      display: none;
+    .image_slider_container {
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      .image_slider {
+        padding: 0;
+        list-style: none;
+        margin: 0;
+        height: 100%;
+        position: relative;
+        transition: transform 250ms ease-in;
+        .image_slide {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
     }
     nav {
       position: absolute;
@@ -67,12 +86,15 @@ body {
     }
     .slider_buttons {
       position: absolute;
-      bottom: 4px;
+      bottom: -1px;
       right: 0px;
       display: flex;
       background: black;
+      width: 117px;
       img {
-        margin: 1.5em 2.3em;
+        margin: 1.2em auto;
+        width: 11px;
+        cursor: pointer;
       }
     }
   }
@@ -154,13 +176,6 @@ body {
       "section3 section4 section5";
     grid-template-rows: auto auto;
     .section1 {
-      .mobile_img {
-        display: none;
-      }
-      .desktop_img {
-        display: block;
-        width: 100%;
-      }
       .slider_buttons {
         bottom: 0px;
         right: -157px;

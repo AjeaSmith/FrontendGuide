@@ -29,12 +29,28 @@
   <body>
     <main class="wrapper">
       <section class="section1 section">
-        <img src="./images/mobile-image-hero-1.jpg" alt="furniture" class="mobile_img"/>
-        <img
-          src="./images/desktop-image-hero-1.jpg"
-          alt="furniture"
-          class="desktop_img"
-        />
+        <div class="image_slider_container">
+          <ul class="image_slider">
+            <li class="image_slide current_slide">
+              <img
+                src="./images/mobile-image-hero-1.jpg"
+                alt="mobile-image-hero-1"
+              />
+            </li>
+            <li class="image_slide">
+              <img
+                src="./images/mobile-image-hero-2.jpg"
+                alt="mobile-image-hero-2"
+              />
+            </li>
+            <li class="image_slide">
+              <img
+                src="./images/mobile-image-hero-3.jpg"
+                alt="mobile-image-hero-3"
+              />
+            </li>
+          </ul>
+        </div>
         <nav>
           <div class="mobile_nav">
             <div class="menu_close">
@@ -62,8 +78,16 @@
           </div> -->
         </nav>
         <div class="slider_buttons">
-          <img src="./images/icon-angle-left.svg" alt="icon-angle-left" />
-          <img src="./images/icon-angle-right.svg" alt="icon-angle-left" />
+          <img
+            src="./images/icon-angle-left.svg"
+            alt="icon-angle-left"
+            class="left"
+          />
+          <img
+            src="./images/icon-angle-right.svg"
+            alt="icon-angle-left"
+            class="right"
+          />
         </div>
       </section>
       <section class="section2 section">
@@ -80,7 +104,11 @@
         </div>
       </section>
       <section class="section3 section">
-        <img src="./images/image-about-dark.jpg" alt="image-about-dark" id="about_img"/>
+        <img
+          src="./images/image-about-dark.jpg"
+          alt="image-about-dark"
+          id="about_img"
+        />
       </section>
       <section class="section4 section">
         <div class="section4_content">
@@ -106,5 +134,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="ajeasmith2.webnode.com/">Ajea Smith</a>.
     </div> -->
+    <script src="./script.js"></script>
   </body>
 </html>
