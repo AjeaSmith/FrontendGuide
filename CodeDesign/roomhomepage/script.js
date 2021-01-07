@@ -1,16 +1,25 @@
 const imageSlider = document.querySelector(".image_slider");
+const contentSlider = document.querySelector(".content_slider");
 const slides = Array.from(imageSlider.children);
-
-// Navigator buttons
+const contentSlides = Array.from(contentSlider.children);
 const prevButton = document.querySelector(".left"),
   nextButton = document.querySelector(".right");
 
+const menuIcon = document.querySelector(".menu_icon");
+const menuIconClose = document.querySelector(".menu_icon_open");
+const menuClose = document.querySelector(".menu_close");
+const menuOpen = document.querySelector(".menu_open");
 const slidesWidth = slides[0].clientWidth;
 
-// arrange slides next to each other
-slides.forEach((slide, index) => {
-  slide.style.left = slidesWidth * index + "px";
-});
+// helper function to arrange slides next to each other
+const arrangeSlides = (slides) => {
+  slides.forEach((slide, index) => {
+    slide.style.left = slidesWidth * index + "px";
+  });
+};
+
+arrangeSlides(slides);
+arrangeSlides(contentSlides);
 
 // helper function to move slides back and forward
 const moveToSlide = (track, currentSlide, targetSlide) => {
@@ -22,15 +31,34 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
 // handle next button clicked
 nextButton.addEventListener("click", (e) => {
   const currentSlide = imageSlider.querySelector(".current_slide");
-  const nextSlide = currentSlide.nextElementSibling;
+  let nextSlide = currentSlide.nextElementSibling;
+  if (nextSlide == null) {
+    nextSlide = slides[0];
+  }
   //   move to the next slide
   moveToSlide(imageSlider, currentSlide, nextSlide);
+  moveToSlide(contentSlider, currentSlide, nextSlide);
 });
 
 // handle prev button clicked
 prevButton.addEventListener("click", (e) => {
   const currentSlide = imageSlider.querySelector(".current_slide");
-  const prevSlide = currentSlide.previousElementSibling;
+  let prevSlide = currentSlide.previousElementSibling;
+
+  if (prevSlide == null) {
+    prevSlide = slides[slides.length - 1];
+  }
   //   move to the next slide
   moveToSlide(imageSlider, currentSlide, prevSlide);
+  moveToSlide(contentSlider, currentSlide, prevSlide);
+});
+
+// handle menu toggle
+menuIcon.addEventListener("click", (e) => {
+  menuOpen.style.display = "flex";
+  menuClose.style.display = "none";
+});
+menuIconClose.addEventListener("click", (e) => {
+  menuOpen.style.display = "none";
+  menuClose.style.display = "flex";
 });

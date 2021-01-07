@@ -16,9 +16,8 @@ body {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "section1" "section2" "section3" "section4" "section5";
-  -ms-grid-rows: 32% 32% auto 27% auto;
-      grid-template-rows: 32% 32% auto 27% auto;
-  row-gap: 25px;
+  -ms-grid-rows: 42% 50% auto auto auto;
+      grid-template-rows: 42% 50% auto auto auto;
 }
 
 .wrapper .section1 {
@@ -75,7 +74,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: none;
 }
 
 .wrapper .section1 nav .mobile_nav .menu_open .menu_icon_open {
@@ -113,7 +111,7 @@ body {
 
 .wrapper .section1 .slider_buttons {
   position: absolute;
-  bottom: -1px;
+  bottom: 0px;
   right: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,34 +133,46 @@ body {
   background-color: white;
 }
 
-.wrapper .section2 .section2_content {
-  padding: 0 2rem;
+.wrapper .section2 .content_slider_container {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2.5em 2em;
+  height: 100%;
 }
 
-.wrapper .section2 .section2_content h1 {
+.wrapper .section2 .content_slider_container .content_slider {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  height: 100%;
+  position: relative;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.wrapper .section2 .content_slider_container .content_slider .content_slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.wrapper .section2 .content_slider_container .content_slider .content_slide h1 {
   font-weight: 600;
   font-size: 2rem;
 }
 
-.wrapper .section2 .section2_content p {
+.wrapper .section2 .content_slider_container .content_slider .content_slide p {
   line-height: 1.8;
   color: #a1a1a1;
   margin-top: 1.3em;
   margin-bottom: 3em;
 }
 
-.wrapper .section2 .section2_content span.shop_now {
+.wrapper .section2 .content_slider_container .content_slider .content_slide span.shop_now {
   text-transform: uppercase;
   font-weight: 700;
   color: #454545;
@@ -170,7 +180,7 @@ body {
   letter-spacing: 0.8em;
 }
 
-.wrapper .section2 .section2_content span.shop_now:after {
+.wrapper .section2 .content_slider_container .content_slider .content_slide span.shop_now:after {
   margin-left: 20px;
   content: url(./images/icon-arrow.svg);
   display: inline-block;
@@ -193,18 +203,8 @@ body {
 }
 
 .wrapper .section4 .section4_content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 2em;
+  padding: 2.5em 2em;
 }
 
 .wrapper .section4 .section4_content h2 {
