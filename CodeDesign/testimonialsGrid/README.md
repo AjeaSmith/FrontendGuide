@@ -39,4 +39,4 @@ Getting creative with CSS Grid with these responsive testimonial cards
 ## Author Info
 
 - Twitter - [@ajeasmith](https://twitter.com/ajeasmith)
-- Website - [Ajea Smith](https://jamesqquick.com)
+- Website - [Ajea Smith](https://github.com/AjeaSmith)
