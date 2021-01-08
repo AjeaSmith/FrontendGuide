@@ -1,4 +1,6 @@
-# Read Me Template
+# Frontend Mentor - Testimonial Section
+
+## Read Me
 
 ![Project Image](https://i.ibb.co/tpTC9pK/Screen-Shot-2021-01-01-at-2-50-59-AM.png)
 
@@ -6,17 +8,9 @@
 
 ---
 
-### Table of Contents
-
-- [Description](#description)
-- [References](#references)
-- [Author Info](#author-info)
-
----
-
 ## Description
 
-Getting creative with CSS Grid with these responsive testimonial cards
+Getting creative with CSS Grid with these responsive testimonial cards.
 
 #### Technologies
 
