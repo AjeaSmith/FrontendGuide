@@ -17,8 +17,7 @@ body {
     "section3"
     "section4"
     "section5";
-  grid-template-rows: 42% 50% auto auto auto;
-
+  grid-template-rows: 83% 50% 337px auto 44%;
   .section1 {
     grid-area: section1;
     position: relative;
@@ -38,10 +37,22 @@ body {
           top: 0;
           bottom: 0;
           width: 100%;
-          img {
+          .img {
             height: 100%;
             width: 100%;
             object-fit: cover;
+          }
+          .img1 {
+            background: url("./images/mobile-image-hero-1.jpg") center center /
+              cover no-repeat;
+          }
+          .img2 {
+            background: url("./images/mobile-image-hero-2.jpg") center center /
+              cover no-repeat;
+          }
+          .img3 {
+            background: url("./images/mobile-image-hero-3.jpg") center center /
+              cover no-repeat;
           }
         }
       }
@@ -81,6 +92,9 @@ body {
             font-size: 25px;
           }
         }
+      }
+      .desktop_nav {
+        display: none;
       }
     }
     .slider_buttons {
@@ -149,9 +163,12 @@ body {
   }
   .section3 {
     grid-area: section3;
-    img {
-      width: 100%;
-    }
+    background: url("./images/image-about-dark.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
   }
   .section4 {
     grid-area: section4;
@@ -173,36 +190,71 @@ body {
   }
   .section5 {
     grid-area: section5;
-    img {
-      width: 100%;
-    }
-  }
-  @media (min-width: 768px) and (max-width: 1024px) {
-    grid-template-rows: auto 17% auto 17% auto;
-  }
-  @media (min-width: 1024px) and (max-width: 1439px) {
-    grid-template-rows: auto 17% auto 17% auto;
+    background: url("./images/image-about-light.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
   }
   @media (min-width: 1440px) {
     grid-template-areas:
       "section1 section1 section2"
       "section3 section4 section5";
-    grid-template-rows: auto auto;
+    grid-template-rows: 630px auto;
+    grid-template-columns: 25% 43% auto;
     .section1 {
-      .slider_buttons {
-        bottom: 0px;
-        right: -157px;
+      .image_slider_container {
+        .image_slider {
+          .image_slide {
+            .img1 {
+              background: url("./images/desktop-image-hero-1.jpg") center center /
+                cover no-repeat;
+            }
+            .img2 {
+              background: url("./images/desktop-image-hero-2.jpg") center center /
+                cover no-repeat;
+            }
+            .img3 {
+              background: url("./images/desktop-image-hero-3.jpg") center center /
+                cover no-repeat;
+            }
+          }
+        }
+      }
+      nav {
+        .mobile_nav {
+          display: none;
+        }
+        .desktop_nav {
+          display: flex;
+          padding: 2em 2em;
+          h2 {
+            margin-right: 1.5em;
+            color: white;
+          }
+          ul {
+            list-style: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            li {
+              margin-right: 1.5em;
+            }
+          }
+        }
       }
     }
-    .section3 {
-      #about_img {
-        display: none;
+    .section2 {
+      padding: 2em;
+      .content_slider {
       }
-      width: 395px;
-      background-image: url(./images/image-about-dark.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
     }
+    .section4{
+      .section4_content{
+        padding: 2.5em;
+      }
+    }
+    
   }
 }

@@ -9,7 +9,7 @@ const menuIcon = document.querySelector(".menu_icon");
 const menuIconClose = document.querySelector(".menu_icon_open");
 const menuClose = document.querySelector(".menu_close");
 const menuOpen = document.querySelector(".menu_open");
-const slidesWidth = slides[0].clientWidth;
+const slidesWidth = slides[0].getBoundingClientRect().width;
 
 // helper function to arrange slides next to each other
 const arrangeSlides = (slides) => {
@@ -28,6 +28,9 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
   targetSlide.classList.add("current_slide");
 };
 
+if (slidesWidth == 1600) {
+  console.log("yup");
+}
 // handle next button clicked
 nextButton.addEventListener("click", (e) => {
   const currentSlide = imageSlider.querySelector(".current_slide");

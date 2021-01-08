@@ -16,8 +16,8 @@ body {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "section1" "section2" "section3" "section4" "section5";
-  -ms-grid-rows: 42% 50% auto auto auto;
-      grid-template-rows: 42% 50% auto auto auto;
+  -ms-grid-rows: 83% 50% 337px auto 44%;
+      grid-template-rows: 83% 50% 337px auto 44%;
 }
 
 .wrapper .section1 {
@@ -52,11 +52,23 @@ body {
   width: 100%;
 }
 
-.wrapper .section1 .image_slider_container .image_slider .image_slide img {
+.wrapper .section1 .image_slider_container .image_slider .image_slide .img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.wrapper .section1 .image_slider_container .image_slider .image_slide .img1 {
+  background: url("./images/mobile-image-hero-1.jpg") center center/cover no-repeat;
+}
+
+.wrapper .section1 .image_slider_container .image_slider .image_slide .img2 {
+  background: url("./images/mobile-image-hero-2.jpg") center center/cover no-repeat;
+}
+
+.wrapper .section1 .image_slider_container .image_slider .image_slide .img3 {
+  background: url("./images/mobile-image-hero-3.jpg") center center/cover no-repeat;
 }
 
 .wrapper .section1 nav {
@@ -107,6 +119,10 @@ body {
 .wrapper .section1 nav .mobile_nav .menu_close .menu_icon {
   margin-right: 6rem;
   font-size: 25px;
+}
+
+.wrapper .section1 nav .desktop_nav {
+  display: none;
 }
 
 .wrapper .section1 .slider_buttons {
@@ -190,10 +206,12 @@ body {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: section3;
-}
-
-.wrapper .section3 img {
+  background: url("./images/image-about-dark.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   width: 100%;
+  height: 100%;
 }
 
 .wrapper .section4 {
@@ -224,44 +242,61 @@ body {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: section5;
-}
-
-.wrapper .section5 img {
+  background: url("./images/image-about-light.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   width: 100%;
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .wrapper {
-    -ms-grid-rows: auto 17% auto 17% auto;
-        grid-template-rows: auto 17% auto 17% auto;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .wrapper {
-    -ms-grid-rows: auto 17% auto 17% auto;
-        grid-template-rows: auto 17% auto 17% auto;
-  }
+  height: 100%;
 }
 
 @media (min-width: 1440px) {
   .wrapper {
         grid-template-areas: "section1 section1 section2" "section3 section4 section5";
-    -ms-grid-rows: auto auto;
-        grid-template-rows: auto auto;
+    -ms-grid-rows: 630px auto;
+        grid-template-rows: 630px auto;
+    -ms-grid-columns: 25% 43% auto;
+        grid-template-columns: 25% 43% auto;
   }
-  .wrapper .section1 .slider_buttons {
-    bottom: 0px;
-    right: -157px;
+  .wrapper .section1 .image_slider_container .image_slider .image_slide .img1 {
+    background: url("./images/desktop-image-hero-1.jpg") center center/cover no-repeat;
   }
-  .wrapper .section3 {
-    width: 395px;
-    background-image: url(./images/image-about-dark.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+  .wrapper .section1 .image_slider_container .image_slider .image_slide .img2 {
+    background: url("./images/desktop-image-hero-2.jpg") center center/cover no-repeat;
   }
-  .wrapper .section3 #about_img {
+  .wrapper .section1 .image_slider_container .image_slider .image_slide .img3 {
+    background: url("./images/desktop-image-hero-3.jpg") center center/cover no-repeat;
+  }
+  .wrapper .section1 nav .mobile_nav {
     display: none;
+  }
+  .wrapper .section1 nav .desktop_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2em 2em;
+  }
+  .wrapper .section1 nav .desktop_nav h2 {
+    margin-right: 1.5em;
+    color: white;
+  }
+  .wrapper .section1 nav .desktop_nav ul {
+    list-style: none;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrapper .section1 nav .desktop_nav ul li {
+    margin-right: 1.5em;
+  }
+  .wrapper .section2 {
+    padding: 2em;
+  }
+  .wrapper .section4 .section4_content {
+    padding: 2.5em;
   }
 }
