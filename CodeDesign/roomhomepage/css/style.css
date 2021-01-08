@@ -267,6 +267,32 @@ body {
   .wrapper .section1 .image_slider_container .image_slider .image_slide .img3 {
     background: url("../images/desktop-image-hero-3.jpg") center center/cover no-repeat;
   }
+  .wrapper .section1 nav .mobile_nav {
+    display: none;
+  }
+  .wrapper .section1 nav .desktop_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2em 2em;
+  }
+  .wrapper .section1 nav .desktop_nav h2 {
+    margin-right: 1.5em;
+    color: white;
+  }
+  .wrapper .section1 nav .desktop_nav ul {
+    list-style: none;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrapper .section1 nav .desktop_nav ul li {
+    margin-right: 1.5em;
+  }
 }
 
 @media (min-width: 1440px) {
