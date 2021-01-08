@@ -251,6 +251,13 @@ body {
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
+  .wrapper {
+        grid-template-areas: "section1 section1 section2" "section3 section4 section5";
+    -ms-grid-rows: 630px auto;
+        grid-template-rows: 630px auto;
+    -ms-grid-columns: 25% 43% auto;
+        grid-template-columns: 25% 43% auto;
+  }
   .wrapper .section1 .image_slider_container .image_slider .image_slide .img1 {
     background: url("../images/desktop-image-hero-1.jpg") center center/cover no-repeat;
   }

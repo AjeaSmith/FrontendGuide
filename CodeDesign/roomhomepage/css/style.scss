@@ -198,6 +198,11 @@ body {
     height: 100%;
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
+    grid-template-areas:
+      "section1 section1 section2"
+      "section3 section4 section5";
+    grid-template-rows: 630px auto;
+    grid-template-columns: 25% 43% auto;
     .section1 {
       .image_slider_container {
         .image_slider {
