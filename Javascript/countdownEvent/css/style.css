@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Bitter", serif;
+}
+main {
+  background: url("../images/snow.jpg") center center / cover no-repeat;
+  height: 100vh;
+}
+.counter_wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.counter_wrapper .counter_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4.5rem 0;
+}
+.counter_wrapper .counter_content .counter_title {
+  letter-spacing: 0.15em;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.counter_wrapper .counter_content ul {
+  list-style: none;
+  display: flex;
+  color: white;
+  text-align: center;
+}
+.counter_wrapper .counter_content ul li {
+  margin-right: 1em;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0),
+    0 100px 80px rgba(0, 0, 0, 0);
+  padding: 2.5em;
+  background: rgba(255, 255, 255, 0.08);
+}
+.counter_wrapper .counter_content ul li:first-child {
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+}
+.counter_wrapper .counter_content ul li:last-child {
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+.counter_wrapper .counter_content ul li h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.counter_wrapper .counter_content ul li p {
+  font-size: 20px;
+  font-weight: 400;
+}
