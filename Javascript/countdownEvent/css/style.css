@@ -36,6 +36,7 @@ main {
   text-align: center;
 }
 .counter_wrapper .counter_content ul li {
+  color: white;
   margin-right: 1em;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -53,7 +54,7 @@ main {
   border-bottom-right-radius: 35px;
 }
 .counter_wrapper .counter_content ul li h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 .counter_wrapper .counter_content ul li p {
