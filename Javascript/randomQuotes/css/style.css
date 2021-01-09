@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fbf1e9;
+  font-family: "Poppins", sans-serif;
+}
+.quote_wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 660px;
+  margin: 45px auto;
+}
+.quote_wrapper .quote_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.quote_wrapper .quote_content .quote_image {
+  text-align: center;
+}
+.quote_wrapper .quote_content .quote_image .quote_subheading {
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: bold;
+}
+.quote_wrapper .quote_content .quote_image img {
+  width: 60%;
+}
+.quote_wrapper .quote_content .quote p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 2em;
+}
+.quote_wrapper .quote_content .quote p .quote_author {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: normal;
+}
+.quote_wrapper .quote_content .quote_btn {
+  font-size: 20px;
+  padding: 0.5em;
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  width: 220px;
+}
+.quote_wrapper .quote_content .quote_btn:hover {
+  border: 4px solid black;
+  color: black;
+  background-color: transparent;
+}
