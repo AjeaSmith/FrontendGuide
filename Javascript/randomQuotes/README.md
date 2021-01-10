@@ -2,7 +2,7 @@
 
 ## Read Me
 
-![Project Image](https://i.ibb.co/VxcD46q/Screen-Shot-2021-01-07-at-7-29-50-PM.png)
+![Project Image](https://i.ibb.co/2Pcrn49/Screen-Shot-2021-01-10-at-4-48-11-PM.png)
 
 > Quote Generator Image.
 
