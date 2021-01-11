@@ -4,10 +4,20 @@ import SideMenu from "./components/SideMenuComponent";
 
 const Wrapper = ({ history }) => {
   return (
-    <main className="AppWrapper">
-      <SideMenu username={history.location.state} />
-      <AppComponent />
-    </main>
+    <>
+      <header>
+        <h2>
+          Flash Cards{" "}
+          <span>
+            <i class="fas fa-bolt"></i>
+          </span>
+        </h2>
+      </header>
+      <main className="AppWrapper">
+        <SideMenu username={history.location.state} />
+        <AppComponent />
+      </main>
+    </>
   );
 };
 

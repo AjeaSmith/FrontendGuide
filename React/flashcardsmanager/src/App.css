@@ -1,14 +1,13 @@
 .AppWrapper {
-  height: 100vh;
-  background-color: teal;
+  height: 92vh;
   display: grid;
   grid-template-columns: 200px auto;
 }
-.AppWrapper nav {
+/* .AppWrapper nav {
   background-color: green;
-}
+} */
 .AppWrapper .app {
-  background-color: pink;
+  background-color: #f3f8fb;
 }
 .username_wrapper {
   background-color: #f3f8fb;
@@ -45,4 +44,80 @@
   border: none;
   cursor: pointer;
   border-radius: 2px;
+}
+header {
+  padding: 0.7em 0;
+  background-color: #252932;
+}
+header h2 {
+  color: #eee;
+  margin: 0 0;
+  margin-left: 1em;
+}
+header span i {
+  color: orangered;
+}
+.AppWrapper nav {
+  color: #eee;
+  background-color: #21252e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.AppWrapper nav .nav_username {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.AppWrapper nav .nav_username .username {
+  background-color: #127b8e;
+  padding: 0.8em;
+  border-radius: 100px;
+  width: 70px;
+  text-align: center;
+  height: 70px;
+  font-size: 25px;
+  margin-bottom: 0.7em;
+}
+.AppWrapper nav .nav_menu {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+.AppWrapper nav .nav_menu li {
+  padding: 15px 0px;
+  padding-left: 20px;
+  color: #eee;
+}
+.AppWrapper nav .nav_menu li:hover {
+  background-color: #127b8e;
+  cursor: pointer;
+  color: white;
+}
+.AppWrapper nav .nav_menu li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #eee;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.AppWrapper nav .nav_menu li a:hover {
+  /* color: white; */
+}
+.AppWrapper nav .nav_menu li a i {
+  margin-right: 5px;
+}
+.AppWrapper nav .nav_logo {
+  text-align: center;
+  font-size: 20px;
+}
+.AppWrapper nav .nav_logo i {
+  padding: 0.70em;
+  text-align: center;
+  color: orangered;
+  width: 50px;
+  height: 50px;
+  border: 2px solid orangered;
+  border-radius: 100px;
 }

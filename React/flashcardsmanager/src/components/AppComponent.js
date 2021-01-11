@@ -14,7 +14,7 @@ const AppComponent = () => {
       </div>
       <div className="cards_wrapper">
         {/* <h2>No cards to show...</h2> */}
-        <CardsComponent/>
+        <CardsComponent />
       </div>
     </section>
   );
