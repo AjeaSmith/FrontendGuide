@@ -1,0 +1,12 @@
+.AppWrapper {
+  height: 100vh;
+  background-color: teal;
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+.AppWrapper nav {
+  background-color: green;
+}
+.AppWrapper section {
+  background-color: pink;
+}
