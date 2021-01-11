@@ -7,7 +7,7 @@
 .AppWrapper nav {
   background-color: green;
 }
-.AppWrapper section {
+.AppWrapper .app {
   background-color: pink;
 }
 .username_wrapper {
