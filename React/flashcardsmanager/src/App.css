@@ -10,3 +10,39 @@
 .AppWrapper section {
   background-color: pink;
 }
+.username_wrapper {
+  background-color: #f3f8fb;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.username_wrapper .username_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 2em;
+}
+.username_wrapper .username_content form {
+  display: flex;
+  flex-direction: column;
+}
+.username_wrapper .username_content input {
+  border-radius: 2px;
+  border: 1px solid lightgray;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.username_wrapper .username_content button {
+  background-color: #7555f8;
+  font-weight: bold;
+  color: white;
+  padding: 0.8em;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 
-const SideMenu = () => {
-  return <nav>im the side</nav>;
+const SideMenu = ({ username }) => {
+  return <nav>{username}</nav>;
 };
 
 export default SideMenu;

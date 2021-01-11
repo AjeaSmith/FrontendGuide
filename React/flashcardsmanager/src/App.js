@@ -1,21 +1,13 @@
 import "./App.css";
-import SideMenuComponent from "./components/SideMenuComponent";
-import AppComponent from "./components/AppComponent";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import GetUsername from "./components/GetUsername";
+import Wrapper from "./Wrapper";
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
-          <GetUsername />
-        </Route>
-        <Route path="/home">
-          <main className="AppWrapper">
-            <SideMenuComponent />
-            <AppComponent />
-          </main>
-        </Route>
+        <Route exact path="/" component={GetUsername} />
+        <Route path="/home" component={Wrapper} />
       </Switch>
     </Router>
   );
