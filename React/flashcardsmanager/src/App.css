@@ -1,11 +1,8 @@
 .AppWrapper {
   height: 92vh;
   display: grid;
-  grid-template-columns: 200px auto;
+  grid-template-columns: 190px auto;
 }
-/* .AppWrapper nav {
-  background-color: green;
-} */
 .AppWrapper .app {
   background-color: #f3f8fb;
 }
@@ -57,6 +54,24 @@ header h2 {
 header span i {
   color: orangered;
 }
+#checkbox:checked ~ .AppWrapper {
+  height: 92vh;
+  display: grid;
+  grid-template-columns: 65px auto;
+}
+#checkbox:checked ~ .AppWrapper nav .nav_username .username {
+  width: 45px;
+  height: 45px;
+  padding: 0.7em;
+  font-size: 18px;
+  background-color: #127b8e;
+}
+#checkbox:checked ~ .AppWrapper nav .nav_username h4 {
+  visibility: hidden;
+}
+#checkbox:checked ~ .AppWrapper nav .nav_menu li a span {
+  display: none;
+}
 .AppWrapper nav {
   color: #eee;
   background-color: #21252e;
@@ -86,9 +101,9 @@ header span i {
   margin: 0;
 }
 .AppWrapper nav .nav_menu li {
-  padding: 15px 0px;
-  padding-left: 20px;
+  padding: 15px 20px;
   color: #eee;
+  border-bottom: 3px solid #2b2d37;
 }
 .AppWrapper nav .nav_menu li:hover {
   background-color: #127b8e;
@@ -101,23 +116,22 @@ header span i {
   color: #eee;
   cursor: pointer;
   letter-spacing: 1px;
-}
-.AppWrapper nav .nav_menu li a:hover {
-  /* color: white; */
+  font-size: 15px;
 }
 .AppWrapper nav .nav_menu li a i {
-  margin-right: 5px;
+  margin-right: 8px;
+  font-size: 20px;
 }
 .AppWrapper nav .nav_logo {
   text-align: center;
   font-size: 20px;
 }
 .AppWrapper nav .nav_logo i {
-  padding: 0.70em;
+  padding: 0.6em;
   text-align: center;
   color: orangered;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border: 2px solid orangered;
   border-radius: 100px;
 }

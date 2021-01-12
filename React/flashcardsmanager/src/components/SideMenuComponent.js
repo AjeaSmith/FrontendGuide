@@ -12,19 +12,25 @@ const SideMenu = ({ username }) => {
       <ul className="nav_menu">
         <li>
           <a href="#">
-            <i class="fas fa-home"></i>
+            <i className="fas fa-home"></i>
             <span>Dashboard</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <i class="fas fa-plus"></i>
+            <i className="fas fa-plus"></i>
             <span>Add New Card</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i className="fas fa-power-off"></i>
+            <span>Logout</span>
           </a>
         </li>
       </ul>
       <div className="nav_logo">
-        <i class="fas fa-bolt"></i>
+        <i className="fas fa-bolt"></i>
       </div>
     </nav>
   );
