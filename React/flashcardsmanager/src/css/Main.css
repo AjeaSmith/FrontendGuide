@@ -1,0 +1,41 @@
+.App {
+  display: grid;
+  grid-template-rows: 70px auto;
+  background-color: #e9eff3;
+}
+.App .search_wrapper {
+  padding: 1.5em;
+}
+.App .search_wrapper input {
+  background-color: #fff;
+  padding: 1em;
+  width: 100%;
+  border: 1px solid rgb(222, 221, 221);
+}
+.App .cards_wrapper {
+  padding: 1.5em;
+}
+.App .cards_wrapper section {
+  display: flex;
+  flex-wrap: wrap;
+}
+.App .cards_wrapper .card {
+  /* border: 1px solid #eee; */
+  border-radius: 2px;
+  background-color: white;
+  margin-right: 5px;
+  box-shadow: 0 8px 6px -5px rgb(231, 231, 231);
+  height: 300px;
+  width: 320px;
+  padding: 1.5em;
+}
+.App .cards_wrapper .card .card_content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.App .cards_wrapper .card .card_content p {
+  text-align: center;
+  max-width: 260px;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import AppComponent from "./components/AppComponent";
 import SideMenu from "./components/SideMenuComponent";
-
+import "./css/App.css";
 const Wrapper = ({ history }) => {
   return (
     <>

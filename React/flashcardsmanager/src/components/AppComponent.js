@@ -1,15 +1,15 @@
 import React from "react";
 import CardsComponent from "./CardsComponent";
-
+import "../css/Main.css";
 const AppComponent = () => {
   return (
-    <section className="app">
+    <section className="App">
       <div className="search_wrapper">
         <input
           type="text"
           name="search"
           id="search"
-          placeholder="Search cards..."
+          placeholder="Search for your cards..."
         />
       </div>
       <div className="cards_wrapper">
