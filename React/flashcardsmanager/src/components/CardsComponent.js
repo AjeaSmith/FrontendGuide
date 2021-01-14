@@ -1,37 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { getCards } from "../services/cardsService";
-const CardsComponent = ({ data }) => {
-  const [cards, setCards] = useState(null);
-  useEffect(() => {
-    // const data = getCards();
-    setCards(data);
-  }, []);
+import React, { useContext } from "react";
+import { AppContext } from "../context/AppContext";
+const CardsComponent = () => {
+  const { cards } = useContext(AppContext);
   return (
     <section>
-      {!cards ? (
-        <p>No cards to show...</p>
-      ) : (
-        cards.map((card, index) => {
-          return (
-            <div className="card" key={index}>
-              <div className="card_content">
-                <h3>{card.question}</h3>
-                <p>{card.answer}</p>
-                <div className="card_actions">
-                  <span>{card.posted}</span>
-                  <div className="card_actions_icons">
-                    <i className="fas fa-edit"></i>
-                    <i className="fas fa-trash-alt"></i>
-                  </div>
+      {/* I have all the cards */}
+      {/* Loop through cards from localstorage that gets added */}
+      {cards.map((card) => {
+        return (
+          <div className="card" key={card.id}>
+            <div className="card_content">
+              <h3>{card.question}</h3>
+              <p>{card.answer}</p>
+              <div className="card_actions">
+                <span>{card.posted}</span>
+                <div className="card_actions_icons">
+                  <i className="fas fa-edit"></i>
+                  <i className="fas fa-trash-alt"></i>
                 </div>
               </div>
             </div>
-          );
-        })
-      )}
-      {/* I have all the cards */}
-      {/* Loop through cards from localstorage that gets added */}
-      {/* card fliip back */}
+          </div>
+        );
+      })}
       {/* <div className="card">
         <div className="card_content">
           <h3>What is the color of the sun?</h3>

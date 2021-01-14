@@ -8,7 +8,7 @@
 .AppWrapper .App {
   margin-left: 220px;
   background-color: #f3f8fb;
-  
+  height: 100vh;
 }
 
 .username_wrapper {

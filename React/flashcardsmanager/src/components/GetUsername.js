@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AppContext } from "../context/AppContext";
 const GetUsername = ({ history }) => {
-  const [username, setusername] = useState("");
+  const { username, setName } = useContext(AppContext);
   const checkUsername = (e) => {
     e.preventDefault();
     if (username === "") return;
@@ -8,7 +9,7 @@ const GetUsername = ({ history }) => {
       pathname: "/home",
       state: username,
     });
-    setusername("");
+    setName("");
   };
 
   return (
@@ -21,7 +22,7 @@ const GetUsername = ({ history }) => {
             id="username"
             placeholder="Enter a username"
             value={username}
-            onChange={(e) => setusername(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
           />
           <button type="submit" className="submit_btn">
             Submit

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Modal, Button } from "react-bootstrap";
-import { addCard } from "../services/cardsService";
-const SideMenu = ({ username }) => {
+import { AppContext } from "../context/AppContext";
+const SideMenu = () => {
+  const { addCard, username, cards } = useContext(AppContext);
   const [show, setShow] = useState(false);
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
@@ -15,7 +16,10 @@ const SideMenu = ({ username }) => {
     };
     addCard(data);
     setShow(false);
+    setQuestion("");
+    setAnswer("");
   };
+  console.log(cards);
   return (
     <>
       <nav>

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import CardsComponent from "./CardsComponent";
 import "../css/Main.css";
-const AppComponent = ({ data }) => {
+import { AppContext } from "../context/AppContext";
+const AppComponent = () => {
+  const { cards } = useContext(AppContext);
   return (
     <section className="App">
       <div className="search_wrapper">
@@ -13,8 +15,7 @@ const AppComponent = ({ data }) => {
         />
       </div>
       <div className="cards_wrapper">
-        {/* <h2>No cards to show...</h2> */}
-        <CardsComponent data={data} />
+        {!cards.length ? <h2>No cards to show...</h2> : <CardsComponent />}
       </div>
     </section>
   );
