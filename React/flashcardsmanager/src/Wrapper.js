@@ -3,6 +3,7 @@ import AppComponent from "./components/AppComponent";
 import SideMenu from "./components/SideMenuComponent";
 import "./css/App.css";
 const Wrapper = ({ history }) => {
+  const data = JSON.parse(localStorage.getItem("cards"));
   return (
     <>
       <input type="checkbox" id="checkbox" style={{ display: "none" }} />
@@ -26,7 +27,7 @@ const Wrapper = ({ history }) => {
       </header>
       <main className="AppWrapper">
         <SideMenu username={history.location.state} />
-        <AppComponent />
+        <AppComponent data={data} />
       </main>
     </>
   );

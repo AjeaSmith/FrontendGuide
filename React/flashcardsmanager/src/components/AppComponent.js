@@ -1,12 +1,12 @@
 import React from "react";
 import CardsComponent from "./CardsComponent";
 import "../css/Main.css";
-const AppComponent = () => {
+const AppComponent = ({ data }) => {
   return (
     <section className="App">
       <div className="search_wrapper">
         <input
-          type="text"
+          type="search"
           name="search"
           id="search"
           placeholder="Search for your cards..."
@@ -14,7 +14,7 @@ const AppComponent = () => {
       </div>
       <div className="cards_wrapper">
         {/* <h2>No cards to show...</h2> */}
-        <CardsComponent />
+        <CardsComponent data={data} />
       </div>
     </section>
   );

@@ -1,12 +1,16 @@
 .AppWrapper {
-  height: 92vh;
-  display: grid;
+  height: 100vh;
+  width: 100%;
+  /* display: grid;
   grid-template-columns: 190px auto;
-  transition: 500ms grid-template-columns;
+  transition: 500ms grid-template-columns; */
 }
-.AppWrapper .app {
+.AppWrapper .App {
+  margin-left: 220px;
   background-color: #f3f8fb;
+  
 }
+
 .username_wrapper {
   background-color: #f3f8fb;
   display: flex;
@@ -44,21 +48,27 @@
   border-radius: 2px;
 }
 header {
+  position: fixed;
+  height: 60px;
+  width: 100%;
   padding: 0.7em 0;
   background-color: #252932;
+  z-index: 100;
 }
 header h2 {
   color: #eee;
   margin: 0 0;
   margin-left: 1em;
+  font-size: 28px;
 }
 header span i {
   color: orangered;
 }
-#checkbox:checked ~ .AppWrapper {
-  height: 92vh;
-  display: grid;
-  grid-template-columns: 65px auto;
+#checkbox:checked ~ .AppWrapper .App {
+  margin-left: 65px;
+}
+#checkbox:checked ~ .AppWrapper nav {
+  width: 65px;
 }
 #checkbox:checked ~ .AppWrapper nav .nav_username .username {
   width: 45px;
@@ -79,6 +89,10 @@ header span i {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: fixed;
+  width: 220px;
+  height: 93vh;
+  top: 60px;
 }
 .AppWrapper nav .nav_username {
   display: flex;
