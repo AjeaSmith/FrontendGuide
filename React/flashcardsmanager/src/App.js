@@ -4,14 +4,14 @@ import Wrapper from "./Wrapper";
 import AppContextProvider from "./context/AppContext";
 function App() {
   return (
-    <Router>
-      <Switch>
-        <AppContextProvider>
+    <AppContextProvider>
+      <Router>
+        <Switch>
           <Route exact path="/" component={GetUsername} />
           <Route path="/home" component={Wrapper} />
-        </AppContextProvider>
-      </Switch>
-    </Router>
+        </Switch>
+      </Router>
+    </AppContextProvider>
   );
 }
 

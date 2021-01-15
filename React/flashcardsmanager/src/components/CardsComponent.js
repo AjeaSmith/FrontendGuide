@@ -1,7 +1,10 @@
 import React, { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 const CardsComponent = () => {
-  const { cards } = useContext(AppContext);
+  const { cards, removeCard } = useContext(AppContext);
+  const dateFormat = (date) => {
+    return new Date(date).toDateString();
+  };
   return (
     <section>
       {/* I have all the cards */}
@@ -13,51 +16,18 @@ const CardsComponent = () => {
               <h3>{card.question}</h3>
               <p>{card.answer}</p>
               <div className="card_actions">
-                <span>{card.posted}</span>
+                <span>{dateFormat(card.posted)}</span>
                 <div className="card_actions_icons">
                   <i className="fas fa-edit"></i>
-                  <i className="fas fa-trash-alt"></i>
+                  <i
+                    className="fas fa-trash-alt"
+                    onClick={() => removeCard(card.id)}></i>
                 </div>
               </div>
             </div>
           </div>
         );
       })}
-      {/* <div className="card">
-        <div className="card_content">
-          <h3>What is the color of the sun?</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-            nobis corporis distinctio sed praesentium nihil, aliquam ipsa,
-            libero nulla
-          </p>
-          <div className="card_actions">
-            <span>1/09/2021</span>
-            <div className="card_actions_icons">
-              <i className="fas fa-edit"></i>
-              <i className="fas fa-trash-alt"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="card">
-        <div className="card_content">
-          <h3>What is the color of the sky?</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            officiis dicta sunt? Ullam, ipsum nesciunt?
-          </p>
-          <div className="card_actions">
-            <span>1/09/2021</span>
-            <div className="card_actions_icons">
-              <i className="fas fa-edit"></i>
-              <i className="fas fa-trash-alt"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-     */}
     </section>
   );
 };

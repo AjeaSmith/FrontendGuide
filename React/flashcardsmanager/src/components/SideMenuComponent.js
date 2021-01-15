@@ -1,12 +1,16 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Modal, Button } from "react-bootstrap";
 import { AppContext } from "../context/AppContext";
-const SideMenu = () => {
-  const { addCard, username, cards } = useContext(AppContext);
+import { withRouter } from "react-router";
+const SideMenu = ({ history }) => {
+  const { addCard, username, setName } = useContext(AppContext);
   const [show, setShow] = useState(false);
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
+  useEffect(() => {
+    localStorage.getItem("username");
+  }, [username]);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const sendData = () => {
@@ -19,7 +23,10 @@ const SideMenu = () => {
     setQuestion("");
     setAnswer("");
   };
-  console.log(cards);
+  const logout = () => {
+    setName("");
+    history.push("/");
+  };
   return (
     <>
       <nav>
@@ -43,7 +50,7 @@ const SideMenu = () => {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a onClick={logout}>
               <i className="fas fa-power-off"></i>
               <span>Logout</span>
             </a>
@@ -103,4 +110,4 @@ const SideMenu = () => {
   );
 };
 
-export default SideMenu;
+export default withRouter(SideMenu);
