@@ -18,3 +18,21 @@ header .ant-page-header-heading .ant-page-header-heading-left .ant-avatar {
 header .ant-page-header-heading .ant-page-header-heading-sub-title {
   color: white;
 }
+.wrapper .video_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .video_details .ant-empty-normal {
+  margin: 0;
+}
+.wrapper .video_analytics .ant-card-body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.wrapper .video_analytics .ant-card-body .progress_wrapper {
+  justify-content: space-around;
+  display: flex;
+}

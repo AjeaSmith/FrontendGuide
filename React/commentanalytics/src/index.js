@@ -1,13 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "./application/App.js";
 import "antd/dist/antd.css";
 import "./index.css";
+import AppContextProvider from "./application/context/AppContext";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppContextProvider>
+      <App />
+    </AppContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
